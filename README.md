@@ -126,7 +126,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 ~~~
 
-최종적인 모습은 아래 이미지와 같습니다.
+최종적인 모습은 아래 이미지와 비슷합니다.  
 
 ![캡쳐화면](https://user-images.githubusercontent.com/31053133/52839092-3cd48100-3138-11e9-842d-d049c0125b4d.png)
 
@@ -141,5 +141,5 @@ django 디렉토리로 이동해서 서버를 실행시킵니다.
 	cd statist
 	python manage.py runserver
 
-웹브라우저에서 접속합니다.
-[http://localhost:8000/](#localhost:8000/)
+웹브라우저에서 접속합니다.  
+http://localhost:8000/
