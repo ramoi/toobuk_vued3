@@ -28,7 +28,7 @@ https://wikidocs.net/8
 C:\project 하위에 vue 라는 디렉토리를 만듭니다.  
 이제 vue 디렉토리가 vue 작업 디렉토리입니다.  
 https://github.com/ramoi/vue-d3#%EC%84%A4%EC%B9%98 로 가셔서 해당 프로젝트를 설치합니다.  
-정상적으로 설치하시면 webpack.config.js 파일이 생성될텐데요. 해당 파일을 아래와 같이 수정합니다.  
+정상적으로 설치하시면 webpack.config.js 파일이 생성될텐데요. 해당 파일을 수정합니다.  
 
 ~~~
 var path = require('path')
@@ -130,7 +130,7 @@ if (process.env.NODE_ENV === 'production') {
 
 ![캡쳐화면](https://user-images.githubusercontent.com/31053133/52839092-3cd48100-3138-11e9-842d-d049c0125b4d.png)
 
-vue 디렉토리로 이동해서 빌드해줍니다.
+vue 디렉토리로 이동해서 빌드!!  
 
 	cd vue\chart
 	yarn run dev
@@ -141,5 +141,4 @@ django 디렉토리로 이동해서 서버를 실행시킵니다.
 	cd statist
 	python manage.py runserver
 
-웹브라우저에서 접속합니다.  
 http://localhost:8000/
