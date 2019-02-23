@@ -1,18 +1,14 @@
 from toobuk.tb import Toobuk
 
-class Debt:
-	def __init__(self) :
-		self._walker = Toobuk('statist/debt/debt.json')
+__walker__ = Toobuk('statist/debt/debt')
+		
 
-class DebtClass(Debt) :
-	def grumble(self) :
-		return self._walker.get('debtClass')
+def getDebt() :
+	return __walker__.get('debtInfo/date&debtCp')
 
+# def deptClass() :
+# 	return __result__.get('deptClass')
 
-class GovernmentDebtRatio(Debt) :
-	def grumble(self) :
-		return self._walker.get('governmentDebtRatio')
+# def debtCp() :
+# 	return __result__.get('debtCp')
 
-class DebtCp(Debt) :
-	def grumble(self) :
-		return self._walker.get('debtCp')

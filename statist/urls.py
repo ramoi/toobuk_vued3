@@ -34,13 +34,11 @@ urlpatterns = [
     #     name="app",
     # ),
     url(r'^sample$', TemplateView.as_view(template_name='sample.html'), name='sample'),
-    url(r'^stock/getStock$', action.getStock),
-    url(r'^currency/m2$', action.m2),
-    url(r'^debt/gDebt$', action.governmentDebtRatioByGdp),
-    url(r'^debt/deptCp$', action.deptCp),
-    url(r'^house/getLoc$', action.getLoc),
-    url(r'^house/getDate$', action.getDate),
-    url(r'^house/getTradeIDRatio$', action.getTradeIDRatio),
+    url(r'^stock$', action.getStock),
+    url(r'^currency$', action.getCurrency),
+    url(r'^debt$', action.getDebt),
+    url(r'^house/trade$', action.getTrade),
+    url(r'^house/charter$', action.getCharter),
 
     #url(r'^statist$', views.render_statist, name='render_statist'),
 ]

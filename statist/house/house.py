@@ -1,13 +1,11 @@
 from toobuk.tb import Toobuk
 
-htb = Toobuk('statist/house/house.json')
+htb = Toobuk('statist/house/house')
 
-def getDate() :
-	return htb.get('getDate')
+def getTrade() :
+	return htb.get('trade/date&loc&changeRate')
 
-def getLoc() :
-	return htb.get('getLoc')
+def getCharter() :
+	return htb.get('charter/changeRate')
 
-def getTradeIDRatio() :
-	return htb.get('getTradeIDRatio')
 

@@ -2,11 +2,17 @@ from toobuk.tb import Toobuk
 
 class StockProgress(Toobuk) :
 	def __init__(self) :
-		self._walker = Toobuk('statist/stock/stock.json')
+		self.__walker__ = Toobuk('statist/stock/stock')
 
 	def grumble(self) :
-		stock = self._walker.get('stock') 
-		cmpr = self._walker.get("cmpr") 
+		stockList = self.__walker__.get('stock')['stockList']
+		cmprList = self.__walker__.get("cmpr") ['cmprList']
 
-		return { 'stock' : stock, 'cmpr' : cmpr }
+		for stock in stockList :
+			parameter = { 'code' : stock['code'] }
+			# stock.update( self.__walker__.get('stockDetail', parameter)['name'] )
+			stock.update(self.__walker__.get('stockDetail', parameter)['name']['data'])
+			print(stock)
+
+		return { 'stock' : stockList, 'cmpr' : cmprList }
 
