@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 whitenoise
 beautifulsoup4
 toobuk
 django
 gunicorn
 django-heroku
+=======
+beautifulsoup4
+django
+toobuk
+>>>>>>> 4a8524248abd80f2a9fd4f7fd9622c8ee6f0b25d
