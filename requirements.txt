@@ -1,0 +1,6 @@
+whitenoise
+beautifulsoup4
+toobuk
+django
+gunicorn
+django-heroku
