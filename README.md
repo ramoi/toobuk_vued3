@@ -10,6 +10,9 @@ https://github.com/ramoi/vue-d3
 vue-d3는 기능이 미미합니다. 실무에서는 쓸 수 없어요  
 다만 이제 시작하는 분들에게 도움이 된다면 좋을 것 같네요  
 
+아래에서 그 내용을 확인할 수 있습니다.  
+https://toobuk.herokuapp.com
+
 ## 설치 
 python을 설치했다는 가정하에 진행합니다. 아래 사이트를 참고해주세요  
 https://wikidocs.net/8
@@ -125,10 +128,6 @@ if (process.env.NODE_ENV === 'production') {
   ])
 }
 ~~~
-
-최종적인 모습은 아래 이미지와 비슷합니다.  
-
-![캡쳐화면](https://user-images.githubusercontent.com/31053133/52839092-3cd48100-3138-11e9-842d-d049c0125b4d.png)
 
 vue 디렉토리로 이동해서 빌드!!  
 
