@@ -125,7 +125,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # heroku
-STATIC_ROOT = os.path.join(BASE_DIR, 'templates/static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'templates/static')
 
 
 STATICFILES_DIRS = (
