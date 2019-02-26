@@ -44,6 +44,7 @@
 	"stockDetail" : {
 				"url" : "https://finance.naver.com/item/main.nhn?code=#code#",
 				"bs.type" : "html.parser",
+				"encoding" : "utf-8",
 				"output" : {
 							"name" : { "type" : "single",
 									"pattern" :  [ {
