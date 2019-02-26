@@ -1,6 +1,6 @@
 {
 	"nation" : {
-				"url" : "https://www.index.go.kr/potal/stts/idxMain/selectPoSttsIdxMainPrint.do?idx_cd=1072&board_cd=INDX_001",
+				"url" : "http://www.index.go.kr/potal/stts/idxMain/selectPoSttsIdxMainPrint.do?idx_cd=1072&board_cd=INDX_001",
 				"bs.type" : "html.parser",
 				"output" : {
 							"growthRate" :  {  "type" : "list",
