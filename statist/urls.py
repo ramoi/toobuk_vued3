@@ -33,7 +33,7 @@ urlpatterns = [
     #     TemplateView.as_view(template_name="application.html"),
     #     name="app",
     # ),
-    url(r'^sample$', TemplateView.as_view(template_name='sample.html'), name='sample'),
+    # url(r'^sample$', TemplateView.as_view(template_name='sample.html'), name='sample'),
     url(r'^stock$', action.getStock),
     url(r'^curr$', action.getCurrency),
     url(r'^debt$', action.getDebt),
