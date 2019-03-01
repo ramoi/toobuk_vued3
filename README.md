@@ -13,19 +13,53 @@ vue-d3는 기능이 미미합니다. 실무에서는 쓸 수 없어요
 아래에서 그 내용을 확인할 수 있습니다.  
 https://toobuk.herokuapp.com
 
-## 설치 
+## 차례
+1. [설치](#설치)
+1. [django 실행](#django-실행)
+1. [vue-연동](#vue-연동)
+
+### 설치 
 python을 설치했다는 가정하에 진행합니다. 아래 사이트를 참고해주세요  
 https://wikidocs.net/8
 
-	pip install django
-	pip install toobuk
+    pip install django
+    pip install beautifulsoup4 toobuk
+    pip install whitenoise gunicor
 
 
-그리고 작업 디렉토리를 만드 후, 프로젝트를 생성합니다. 아래는 statist라는 프로젝트를 생성하는 것입니다.  
 
-	django-admin startproject statist
-	cd statist
-	mkdir templates
+그리고 작업 디렉토리를 만드 후, github에서 소스를 받아옵니다.
+
+    mkdir project
+    cd project
+    git init
+    git clone https://github.com/ramoi/toobuk_vued3.git
+
+toobuk_vued3/statist/settings.py 수정
+
+주석처리  
+46라인
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    ->
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
+128라인
+
+    STATIC_ROOT = os.path.join(BASE_DIR, 'templates/static')  
+    ->
+    STATIC_ROOT = os.path.join(BASE_DIR, 'templates/static')  
+
+### django 실행
+django 디렉토리로 이동해서 서버를 실행시킵니다.
+    
+    cd project/toobuk_vued3
+    python manage.py runserver
+    http://localhost:8000/
+
+### vue 연동
+vue 연동은 안하셔도 됩니다. 다만, vuejs를 수정하면서 화면을 보고 싶다면 아래 참고하시면 됩니다.  
+완전한 연동은 아니고, vuejs에서 build를 하여 django의 static디렉토리에 build.js를 떨어뜨리는 방식입니다.  
 
 만일 작업 디렉토리가 C:\project 그 하위에 statist라는 디렉토리가 생성이 되었을겁니다.  
 C:\project 하위에 vue 라는 디렉토리를 만듭니다.  
@@ -132,12 +166,5 @@ if (process.env.NODE_ENV === 'production') {
 vue 디렉토리로 이동해서 빌드!!  
 
 	cd vue\chart
-	yarn run dev
+	yarn run build
 
-
-django 디렉토리로 이동해서 서버를 실행시킵니다.
-
-	cd statist
-	python manage.py runserver
-
-http://localhost:8000/
