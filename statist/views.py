@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from statist.currency.currency import *
-from statist.debt import debt
+from statist.debt import nation 
+from statist.debt import family
 from statist.house import  house
 from django.http import JsonResponse
 from django.shortcuts import redirect
@@ -39,7 +40,14 @@ def getCurrency(request) :
 	return JsonResponse({ 'result' : resultData })
 
 def getDebt(request) :
-	resultData = debt.getDebt()
+	resultData = nation.get()
+
+	print(resultData)
+
+	return JsonResponse({ 'result' : resultData })
+
+def getDebtFamily(request) :
+	resultData = family.get()
 
 	print(resultData)
 

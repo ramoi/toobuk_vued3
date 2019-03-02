@@ -1,11 +1,11 @@
 {
 	"nation" : {
-				"url" : "http://www.index.go.kr/potal/stts/idxMain/selectPoSttsIdxMainPrint.do?idx_cd=1072&board_cd=INDX_001",
+				"url" : "http://www.index.go.kr/potal/main/EachDtlPageDetail.do?idx_cd=1072",
 				"bs.type" : "html.parser",
 				"output" : {
 							"growthRate" :  {  "type" : "list",
 											"pattern" : [	{
-																"selector" : "thead p span",
+																"selector" : "thead th p",
 																"name" : "NAME"
 															}, {
 																"selector" : "tbody p", 
@@ -13,7 +13,37 @@
 																"type" : "float"
 															}
 														]
-										}
+										},
+							"changeRate" : {"type" : "list",
+												"pattern" : [{
+																"selector" : "#t_Table_107201 thead > tr:nth-of-type(1) > th",
+																"name" : "DATE",
+																"slice" : {"start": 1 },
+																"regx" : { "pattern" : "(?P<YYYY>\\d{4})(?P<MM>\\d{2})." , "replace" : "\\g<YYYY>\\g<MM>" },
+																"type" : "int"
+															}, {
+																"selector" : "#t_Table_107201 tbody > tr:nth-of-type(8) > td", 
+																"name" : "본원통화",
+																"regx" : { "pattern" : "," , "replace" : "" },
+																"type" : "float"
+															}, {
+																"selector" : "#t_Table_107201 tbody > tr:nth-of-type(6) > td", 
+																"name" : "M1",
+																"regx" : { "pattern" : "," , "replace" : "" },
+																"type" : "float"
+															}, {
+																"selector" : "#t_Table_107201 tbody > tr:nth-of-type(4) > td", 
+																"name" : "M2",
+																"regx" : { "pattern" : "," , "replace" : "" },
+																"type" : "float"
+															}, {
+																"selector" : "#t_Table_107201 tbody > tr:nth-of-type(2) > td", 
+																"name" : "Lf",
+																"regx" : { "pattern" : "," , "replace" : "" },
+																"type" : "float"
+															}
+														]
+											}
 							}
 			}
 }

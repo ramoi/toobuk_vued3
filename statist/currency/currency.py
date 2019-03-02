@@ -5,4 +5,4 @@ class Currency(Toobuk):
 		self._walker = Toobuk('statist/currency/currency')
 
 	def grumble(self) :
-		return self._walker.get('nation')['growthRate']
+		return self._walker.get('nation')

@@ -24,7 +24,7 @@ from django.conf.urls import url
 from django.views.generic import TemplateView
 import statist.views as action 
 #from django.urls import path
-from django.http import HttpResponse, HttpResponseNotFound, Http404,  HttpResponseRedirect
+# from django.conf.urls.defaults import handler404
 
 from . import views
 
@@ -40,6 +40,7 @@ urlpatterns = [
     url(r'^stock$', action.getStock),
     url(r'^curr$', action.getCurrency),
     url(r'^debt$', action.getDebt),
+    url(r'^debt/family$', action.getDebtFamily),
     url(r'^house/trade$', action.getTrade),
     url(r'^house/charter$', action.getCharter),
 
