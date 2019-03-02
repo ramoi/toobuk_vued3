@@ -26,7 +26,7 @@ def index(request) :
 
 # 	return JsonResponse(resultData)
 
-def getStock(request)
+def getStock(request) :
 	return JsonResponse( {} )
 
 def getCurrency(request) :
