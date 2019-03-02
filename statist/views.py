@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from statist.stock.stock import *
 from statist.currency.currency import *
 from statist.debt import debt
 from statist.house import  house
@@ -19,13 +18,16 @@ def index(request) :
 
 #     return render(request, 'stock/stock.html',template_data)
 
-def getStock(request) :
-	s = StockProgress()
-	resultData = s.grumble()
+# def getStock(request) :
+# 	s = StockProgress()
+# 	resultData = s.grumble()
 
-	print(resultData)
+# 	print(resultData)
 
-	return JsonResponse(resultData)
+# 	return JsonResponse(resultData)
+
+def getStock(request)
+	return JsonResponse( {} )
 
 def getCurrency(request) :
 	s = Currency()
