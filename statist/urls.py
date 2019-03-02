@@ -24,8 +24,11 @@ from django.conf.urls import url
 from django.views.generic import TemplateView
 import statist.views as action 
 #from django.urls import path
+from django.http import HttpResponse, HttpResponseNotFound, Http404,  HttpResponseRedirect
 
 from . import views
+
+handler404 = 'action.view_404' 
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
@@ -42,3 +45,4 @@ urlpatterns = [
 
     #url(r'^statist$', views.render_statist, name='render_statist'),
 ]
+

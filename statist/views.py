@@ -3,6 +3,7 @@ from statist.currency.currency import *
 from statist.debt import debt
 from statist.house import  house
 from django.http import JsonResponse
+from django.shortcuts import redirect
 
 def index(request) : 
 	return render(request, 'stock/index.html')
@@ -53,3 +54,11 @@ def getCharter(request) :
 	resultData = house.getCharter()
 	print(resultData)
 	return JsonResponse({ 'result' : resultData })
+
+
+
+
+def view_404(request):
+    # make a redirect to homepage
+    # you can use the name of url or just the plain link
+    return redirect('/') # or redirect('name-of-index-url')
