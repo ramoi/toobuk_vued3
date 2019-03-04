@@ -28,8 +28,6 @@ import statist.views as action
 
 from . import views
 
-handler404 = 'action.view_404' 
-
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
     # path("",

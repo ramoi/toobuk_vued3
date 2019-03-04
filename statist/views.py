@@ -61,11 +61,3 @@ def getCharter(request) :
 	resultData = house.getCharter()
 	print(resultData)
 	return JsonResponse({ 'result' : resultData })
-
-
-
-
-def view_404(request):
-    # make a redirect to homepage
-    # you can use the name of url or just the plain link
-    return redirect('/') # or redirect('name-of-index-url')
