@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from statist.currency.currency import *
+from statist.currency import currency 
 from statist.debt import nation 
 from statist.debt import family
 from statist.house import  house
@@ -32,8 +32,7 @@ def getStock(request) :
 	return JsonResponse( {} )
 
 def getCurrency(request) :
-	s = Currency()
-	resultData = s.grumble()
+	resultData = currency.get()
 
 	print(resultData)
 

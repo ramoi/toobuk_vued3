@@ -6,3 +6,8 @@ class Currency(Toobuk):
 
 	def grumble(self) :
 		return self._walker.get('nation')
+
+
+__walker__ = Currency()
+def get() :
+	return __walker__.grumble()

@@ -2,8 +2,9 @@ from toobuk.tb import Toobuk
 
 		
 
+__walker__ = Toobuk('statist/debt/nation')
+
 def get() :
-	__walker__ = Toobuk('statist/debt/nation')
 	return __walker__.get('debtInfo/date&debtCp')
 
 # def deptClass() :
