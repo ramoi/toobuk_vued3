@@ -1,6 +1,6 @@
 whitenoise
 beautifulsoup4
-toobuk
+toobuk=0.5.2
 django
 gunicorn
 django-heroku
