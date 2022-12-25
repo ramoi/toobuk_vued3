@@ -28,8 +28,11 @@ SECRET_KEY = '2k4oh6hxru=bp52tc538y9e#yrj1yvia#2wdnoz5mbjp0czm*!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com', 'localhost']
-
+# ALLOWED_HOSTS = ['.herokuapp.com', 'localhost']
+# 배포 세팅2. 내 아이디
+ALLOWED_HOSTS = [
+    'ramoi.pythonanywhere.com'
+] # 이
 # Application definition
 
 INSTALLED_APPS = [
