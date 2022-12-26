@@ -52,7 +52,7 @@
 							}
 			},
 	"charter" : {
-				"url" : "http://www.index.go.kr/potal/main/EachDtlPageDetail.do?idx_cd=1241",
+				"url" : "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?stts_cd=124101&idx_cd=1241&freq=Y&period=N",
 				"bs.type" : "html.parser",
 				"output" : {
 						    "date" : {    "type" : "list",
